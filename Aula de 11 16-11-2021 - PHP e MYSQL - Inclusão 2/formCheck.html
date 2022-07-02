@@ -1,0 +1,30 @@
+<html> <!-- salvar como formCheck.html -->
+	<head>
+		<title>Teste de checkbox</title>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+		<h2>Teste de funcionamento de checkbox</h2>
+		<p>O objetivo deste formulário é mostrar como se comporta 
+		uma caixa de checagem e um botão de rádio, quando não são
+		clicados</p>
+		<hr>
+		
+		<form action="recebeDados.php" method="get">
+			<fieldset>
+				<legend>Teste de envio de dados</legend>
+				Estado Civil:<br>
+				<input type="radio" name="eCivil" value="S" checked>Solteiro<br>
+				<input type="radio" name="eCivil" value="C">Casado<br>
+				<input type="radio" name="eCivil" value="E">Separado<br>
+				<input type="radio" name="eCivil" value="D">Divorciado<br>
+				<input type="radio" name="eCivil" value="V">Viúvo
+				<br><br>
+				<input type="checkbox" name="caixa1" value="1" checked> Eu sou uma caixa de checagem (checkbox)
+				<hr>
+				<input type="submit" value="Enviar dados">
+			</fieldset>
+		</form>
+	</body>
+</html>

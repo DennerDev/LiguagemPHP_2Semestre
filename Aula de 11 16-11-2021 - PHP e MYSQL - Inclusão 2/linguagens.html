@@ -1,0 +1,70 @@
+<html> <!-- salvar como linguagens.html -->
+	<head>
+		<title>Teste de checkbox</title>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+		<h2>Teste de recebimento de dados </h2>
+		<p>O objetivo deste formulário é mostrar como lidar com 
+		objetos / dados não  enviados.</p>
+		<hr>
+		
+		<form 	action="registrarInteresse.php" 
+				method="post"
+				enctype="multipart/form-data">
+			<fieldset>
+				<legend>Tecnologias conhecidas</legend>
+				Nome:
+				<input 	type="text" 
+						name="candidato" 
+						maxlength="50"
+						placeholder="Até 50 caracteres"
+						size="50">
+				<br>
+				e-mail:
+				<input 	type="email" 
+						name="email" 
+						maxlength="50"
+						placeholder="Até 50 caracteres"
+						size="50">
+				<br>
+				Senha:
+				<input 	type="password" 
+						name="senha"
+						placeholder="Até 15 carac."
+						maxlength="15">
+				<br>
+				Senha (novamente):
+				<input 	type="password" 
+						name="senha2"
+						placeholder="Até 15 carac."
+						maxlength="15">
+				
+				
+				<p>Informe a seguir todas as tecnologias que você aprendeu (conhecimento básico):</p>
+				<input type="checkbox" name="HTML" 			value="1"> HTML <br>
+				<input type="checkbox" name="CSS" 			value="1"> CSS <br>
+				<input type="checkbox" name="PHP" 			value="1"> PHP <br>
+				<input type="checkbox" name="MYSQL" 		value="1"> MYSQL <br>
+				<input type="checkbox" name="JAVASCRIPT" 	value="1"> JavaScript <br>
+				<input type="checkbox" name="JAVA" 			value="1"> JAVA <br>
+				<input type="checkbox" name="C" 			value="1"> C <br>
+				
+				<p>selecione a vaga desejada:</p>
+				<input type="radio" name="vaga" value="E" checked>Estagiário
+				<input type="radio" name="vaga" value="J">Desenvolvedor Junior
+				<input type="radio" name="vaga" value="P">Desenvolvedor Pleno
+				<input type="radio" name="vaga" value="F">Desenvolvedor Full Stack
+				<br><br>
+				Descreva sua experiência acadêmica:<br>
+				<textarea name="experiencia" rows="5" cols="80"></textarea>
+				<br><br>
+				Envie seu currículo no formato PDF:
+				<input type="file" name="curriculo">
+				<hr>
+				<input type="submit" value="Enviar dados">
+			</fieldset>
+		</form>
+	</body>
+</html>

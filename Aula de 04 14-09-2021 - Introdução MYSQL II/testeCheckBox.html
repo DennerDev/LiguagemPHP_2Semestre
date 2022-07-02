@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Box</title>
+</head>
+<body>
+    <h2>Teste de funcionamento de checkbox</h2>
+    <p>O objetivo deste formulário é mostrar como se comporta 
+    uma caixa de checagem e um botão de rádio, quando não são
+    clicados</p>
+    <hr>
+    
+    <form action="recebeDados.php" method="get">
+        <fieldset>
+            <legend>Teste de envio de dados</legend>
+            Estado Civil:<br>
+            <input type="radio" name="eCivil" value="S" checked >Solteiro<br>
+            <input type="radio" name="eCivil" value="C">Casado<br>
+            <input type="radio" name="eCivil" value="E">Separado<br>
+            <input type="radio" name="eCivil" value="D">Divorciado<br>
+            <input type="radio" name="eCivil" value="V">Viúvo
+            <br><br>
+            <input type="checkbox" name="caixa1" value="1"> Eu sou uma caixa de checagem (checkbox)
+            <hr>
+            <input type="submit" value="Enviar dados">
+        </fieldset>
+    </form>
+</body>
+</body>
+</html>

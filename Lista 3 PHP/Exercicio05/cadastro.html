@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	
+</body>
+</html>
+	<body>
+
+	<div class="formulario">
+		<h1>Cadastro Básico</h1>
+		<hr>
+
+		<form action="gravarCliente.php" method="get">
+			Nome:
+			<input 	type="text"
+					name="nome"
+					maxlength="30"
+					size="50"
+					placeholder="Informe seu nome">
+			<br>
+            Data de nascimento: <input type="date" name="dataNascimento">
+			<hr>
+			Sexo:
+			<input type="radio" value="M" name="sexo"> Masculino
+			<input type="radio" value="F" name="sexo" checked> Feminino
+			<hr>
+
+			Estado Civil:
+			<select name="estadoCivil">
+			<option value="">Escolha</option>
+		    <option value="S">Solteiro</option>
+		    <option value="C">Casado</option>
+		    <option value="P">Separado</option>
+			<option value="D">Divorciado</option>
+			<option value="V">Viúvo</option>
+	        </select ><br />
+
+			<h2>Dados para contato</h2>
+
+            e-mail: <input type="e-mail" name="email" placeholder="Digite seu e-mail" size="50">
+			<br> <input type="checkbox" name="emails" value="black" /> Desejo receber e-mails <br/>
+			<br>
+
+			Telefone:
+			<input 	type="text"
+					name="telefoneP"
+					maxlength="2"
+					size="3">
+			<input 	type="text"
+					name="telefoneB"
+					maxlength="9"
+					size="20">
+			Tipo:
+			
+			<select name="tipoA">
+				<option value="">Escolha</option>
+				<option value="C">Residencial</option>
+				<option value="G">Celular</option>
+				<option value="P">Comercial</option>
+				<option value="R">Recados</option>
+			</select>
+			<br>
+			Telefone:
+			<input 	type="text"
+					name="telefoneS"
+					maxlength="2"
+					size="3">
+			<input 	type="text"
+					name="telefoneV"
+					maxlength="9"
+					size="20">
+			Tipo:
+			
+			<select name="tipoB">
+				<option value="">Escolha</option>
+				<option value="C">Residencial</option>
+				<option value="G">Celular</option>
+				<option value="P">Comercial</option>
+				<option value="R">Recados</option>
+			</select>
+			<br>
+			Telefone:
+			<input 	type="text"
+					name="telefoneT"
+					maxlength="2"
+					size="3">
+			<input 	type="text"
+					name="telefoneD"
+					maxlength="9"
+					size="20">
+			Tipo:
+			
+			<select name="tipoC">
+				<option value="">Escolha</option>
+				<option value="C">Residencial</option>
+				<option value="G">Celular</option>
+				<option value="P">Comercial</option>
+				<option value="R">Recados</option>
+			</select>
+			<hr>
+
+			<h3>Observações</h3>
+		
+
+			<hr>
+
+            <textarea rows="5" cols="55" wrap="physical" name="obs"> </textarea><br />
+
+			<br>
+
+			<input type="submit" value="Cadastrar">
+		</form>
+	</div>
+
+	</body>
+
+</html>

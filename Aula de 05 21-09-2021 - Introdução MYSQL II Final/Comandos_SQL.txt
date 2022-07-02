@@ -1,0 +1,264 @@
+Agendamento
+- data
+- hora
+- pet
+- serviÃ§o
+- funcionÃ¡rio
+
+- Clientes
+
+- FuncionÃ¡rios
+
+- Pets
+
+
+Caixa
+- data
+- descriÃ§Ã£o serviÃ§o
+- forma pgto
+- valor
+- desconto
+- convenio
+- tipo serviÃ§o
+- atendente
+
+- ServiÃ§os
+  * nome
+  * tipo
+  * preÃ§o / valor
+  ...
+
+
+Tabela de ServiÃ§os
+===========================================
+Alternativa 1
+
+
+nome			tipo		precoPeq	precoMed	precoGde
+********************************************************************************
+Banho			H[igienico]	50,00		60,00		80,00
+Tosa I			H[igienico]	30,00		 0,00		 0,00
+Tosa II			H[igienico]	20,00		 0,00		 0,00
+Corte Unha		H[igienico]	10,00		10,00		15,00
+Consulta VeterinÃ¡ria	V[eterinÃ¡rio]	80,00		 0,00		 0,00
+Medicamento X		V[eterinÃ¡rio]	60,00		60,00		100,00
+Medicamento Y		V[eterinÃ¡rio]	70,00		70,00		120,00
+Medicamento Z		V[eterinÃ¡rio]	100,00		110,00		150,00
+
+
+
+Alternativa 2
+
+id	nome			tipo		categoria	preco
+*********************************************************************
+1	Banho Pet Pequeno	H[igienico]	 B[anhos]	40,00
+2	Banho Pet MÃ©dio		H[igienico]	 B[anhos]	50,00
+3	Banho Pet Grande	H[igienico]	 B[anhos]	70,00
+4	Tosa I			H[igienico]	 T[osas]	 30,00
+5	Tosa II			H[igienico]	 T[osas]	 20,00
+6	Corte Unha P/M		H[igienico]	 C[ortes]	 10,00
+7	Corte Unha G		H[igienico]	 C[ortes]	 15,00
+8	Consulta VeterinÃ¡ria	V[eterinÃ¡rio]	 D[iagnÃ³sticos]	 80,00
+9	Medicamento X  P/M	V[eterinÃ¡rio]	 M[edicamentos]	 60,00
+10	Medicamento X  G	V[eterinÃ¡rio]	 M[edicamentos]	100,00
+11	Medicamento Y P/M	V[eterinÃ¡rio]	 M[edicamentos]	 70,00		
+12	Medicamento Y  G	V[eterinÃ¡rio]	 M[edicamentos]	120,00
+13	Medicamento Z P 	V[eterinÃ¡rio]	 M[edicamentos]	100,00
+14	Medicamento Z M		V[eterinÃ¡rio]	 M[edicamentos]	110,00
+15	Medicamento Z G		V[eterinÃ¡rio]	 M[edicamentos]	150,00
+
+
+
+id	Data		DescriÃ§Ã£o serviÃ§o	valor	idServico
+1512	21/03/2021	Banho Pet MÃ©dio 	50,00	2
+...
+1519	21/03/2021	Banho Pet MÃ©dio		50,00	2
+...
+1527	21/03/2021	Banho Pet Pequeno	40,00	1
+...
+7982	21/09/2021	Banho			50,00
+7983	21/09/2021	Banho			50,00
+7984	21/09/2021	Banho Pet Grande	80,00	3
+
+
+
+Alternativa 1:
+
+==================================
+||	AGENDAMENTO		||
+||				||
+||  Data: [__/__/____]		||
+||  Hora: [__:__]		||
+||				||
+||  Cliente: [________]		||
+||				||
+||  Pet: [_______]		||
+||				||
+||  Tipo: [______]		||
+||				||
+||  ServiÃ§o: [_____]		||
+||				||
+||  Atendente: [__________]	||
+||				||
+||         [AGENDAR]		||
+==================================
+
+
+==================================
+||	AGENDAMENTO		||
+||				||
+||  Data: 21/09/2021		||
+||  Hora: 15:00			||
+||				||
+||  Cliente: Marina		||
+||				||
+||  Pet: SamsÃ£o			||
+||				||
+||  Tipo: Cachorro		||
+||				||
+||  ServiÃ§o: Banho		||
+||				||
+||  Atendente: [JÃ©ssica]	||
+||				||
+||         [AGENDAR]		||
+==================================
+
+
+==================================
+||	AGENDAMENTO		||
+||				||
+||  Data: [21/09/2021]		||
+||  Hora: [23:50]		||
+||				||
+||  Cliente: [Marcos]		||
+||				||
+||  Pet: [PreguiÃ§oso]		||
+||				||
+||  Tipo: [Gato]		||
+||				||
+||  ServiÃ§o: [Banho]		||
+||				||
+||  Atendente: [GÃ©sika]		||
+||				||
+||         [AGENDAR]		||
+==================================
+
+
+
+==================================
+||	AGENDAMENTO		||
+||				||
+||  Data: [21/09/2021]		||
+||  Hora: [16:00]		||
+||				||
+||  Cliente: [Ana]		||
+||				||
+||  Pet: [Princesa]		||
+||				||
+||  Tipo: [Gato]		||
+||				||
+||  ServiÃ§o: [Banho]		||
+||				||
+||  Atendente: [Renata]		||
+||				||
+||         [AGENDAR]		||
+==================================
+
+
+
+
+Alternativa 2:
+
+==================================
+||	AGENDAMENTO		||
+||				||
+||  Data: [21/09/2021]		||
+||  Hora: [15:00]		||
+||				||
+||  Cliente: [Marcos]		||
+||				||
+||  Pet: [PreguiÃ§oso]		||
+||				||
+||  Tipo: [Gato \/]		||
+||				||
+||  ServiÃ§o: [Escolha_\/]	||
+||				||
+||  Atendente: [Escolha___\/]	||
+||				||
+||         [AGENDAR]		||
+==================================
+
+
+
+/* Criando o banco de dados PETSHOP */
+CREATE DATABASE petshop;
+
+/* Conferindo o banco de dados criado */
+SHOW DATABASES;
+
+/* Abrindo o banco */
+USE petshop;
+
+
+/* Criando a tabela PETS */
+
+CREATE TABLE pets (
+	nome  			VARCHAR(30)	,
+	idade    		INT(2)		, 
+	tipo     		CHAR(1)		,
+	peso 	 		FLOAT(7,3) 	,
+    vacinado 		BOOLEAN		,
+	dono 	 		INT			,
+	ultimaVisita 	DATE		,
+	medico 			VARCHAR(30)	,
+	obs TEXT
+);
+
+id 	nome		idade	tipo	peso	....
+1	Atila		5		C		0.125
+2	SansÃ£o		8		P		0.520
+3	Neguinho	13		G		....
+4	Nina		7		G 		....
+5	Atila 		2		P 		....
+
+UPDATE pets SET peso=5 WHERE id=1
+
+/* Eliminando a tabela incorreta */
+DROP TABLE pets;
+
+/* Criando a tabela de forma correta */
+CREATE TABLE pets (
+	id     			INT AUTO_INCREMENT PRIMARY KEY,
+	nome  			VARCHAR(30)	,
+	idade    		INT(2)		, 
+	tipo     		CHAR(1)		,
+	peso 	 		FLOAT(7,3) 	,
+    vacinado 		BOOLEAN		,
+	dono 	 		INT			,
+	ultimaVisita 	DATE		,
+	medico 			VARCHAR(30)	,
+	obs TEXT
+);
+
+/* Visualizar a estrutura da tabela */
+DESCRIBE pets;
+
+/* Inserindo / cadastrando pets */
+INSERT INTO pets 
+	(	nome, 
+		idade, 
+		tipo, 
+		peso, 
+		vacinado, 
+		dono) 
+VALUES 
+	(	"Atila",
+		5,
+		"C",
+		0.125,
+		0,
+		3
+);
+
+/* Exbidindo o registro inserido */
+SELECT *  FROM pets;

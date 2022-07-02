@@ -1,0 +1,13 @@
+CREATE TABLE locacoes ( 
+	dataEntrada    DATE        ,
+	dataSaida      DATE        ,
+	fabricante     VARCHAR(30) ,
+	modeloCarro    VARCHAR(30) ,
+	placaCarro     VARCHAR(8)  ,
+	UF             CHAR(2)     ,
+	horarioEntrada VARCHAR(5)  ,
+	horarioSaida   VARCHAR(5)  ,
+	valorPago      FLOAT(7,2)  ,
+	obs            TEXT        ,
+	convenio       BOOLEAN
+);

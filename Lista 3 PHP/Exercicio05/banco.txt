@@ -1,0 +1,23 @@
+CREATE DATABASE formulario;
+
+USE formulario;
+
+CREATE TABLE cadastro (
+       id     			 INT(11) AUTO_INCREMENT PRIMARY KEY,
+	   nome              VARCHAR(30)  ,
+	   dataNascimento    DATE         ,
+	   sexo              CHAR(1)      ,
+	   estadoCivil       CHAR(1)      ,
+	   email             VARCHAR(100) ,
+	   telefoneP         VARCHAR(2)   ,
+	   telefoneS         VARCHAR(2)   ,
+	   telefoneT         VARCHAR(2)   ,
+	   telefoneB         VARCHAR(9)   ,
+	   telefoneV         VARCHAR(9)   ,
+	   telefoneD         VARCHAR(9)   , 
+	   tipoA             CHAR(1)      ,
+	   tipoB             CHAR(1)      ,
+	   tipoC             CHAR(1)      ,
+       obs               TEXT	   
+);
+	   

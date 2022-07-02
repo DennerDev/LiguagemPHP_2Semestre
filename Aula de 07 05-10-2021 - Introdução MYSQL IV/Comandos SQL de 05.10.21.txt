@@ -1,0 +1,246 @@
+/* 1. Criar o banco de dados da aula de hoje */
+USE Set2021;
+
+/* 2. Inserir registros na tabela de locacoes */
+INSERT INTO locacoes 
+(id, dtEntrada,    hEntrada, dtSaida, hSaida, placa,      uf, fabricante, modelo, cor,     ano, valor, convenio, pago, obs) 
+VALUES 
+(1, "2021-09-14",  "22:55",  NULL,    "",    "ABC-1234","RS", "VW",    "Gol GTI","Prata", 1999,    0,  0,       0,    "");
+
+/* 3. Inserir os demais registros de uma só vez */
+id	dtEntrada	hEntrada	dtSaida		hSaida	placa		uf	fabricante	modelo	cor		ano		valor	convenio	pago	obs
+2	14/09/2021	23:00		15/09/2021	08:00	XYZ-0000	SP	Fiat		Strada	Preta	1985	40.00		0		1		Taxa Pernoite
+3	15/09/2021	08:15		NULL		""		NBC-0101	RJ	Honda		HRV		Branca	2019	0			0		0		""
+4	15/09/2021	08:20		15/09/2021	08:45	GXS-0009	SC	Ford		Ká		Azul	2014	8.00		0		0		Pendente / conta
+5	15/09/2021	08:23		15/09/2021	09:00	GAF-1001	SP	Hiunday		I30		Prata	2011	28.00		1		1		Lavagem simples
+6	15/09/2021	08:40		NULL		""		FAL-9803	SP	GM			Tracker	Verde	2020	0			1		0		""
+7	15/09/2021	08:55		NULL		""		ESC-1055	SP	Peugeot		206		Branca	2015	0			0		0		""
+8	15/09/2021	09:01		NULL		""		BLW-1500	SP	VW			Fusca	Verde	1970	0			0		0		""
+
+/* Inserir o 2o registro */
+INSERT INTO locacoes 
+(dtEntrada,hEntrada, dtSaida , hSaida,placa,uf,fabricante,modelo,cor,ano,valor,convenio,pago,obs)
+VALUES 
+("2021-09-14",	"23:00",	"2021-09-15",	"08:00",	"XYZ-0000",	"SP",	"Fiat",		"Strada",	"Preta",	1985,	40.00,		0,		1,		"Taxa Pernoite");
+
+
+/* Inserir os demais registros */
+
+INSERT INTO locacoes 
+(dtEntrada,hEntrada, dtSaida , hSaida,placa,uf,fabricante,modelo,cor,ano,valor,convenio,pago,obs)
+VALUES 
+("2021-09-15",	"08:15",	NULL,			"",			"NBC-0101",	"RJ",	"Honda",	"HRV",		"Branca",	2019,	0,			0,		0,		"") ,
+("2021-09-15",	"08:20",	"2021-09-15",	"08:45",	"GXS-0009",	"SC",	"Ford",		"Ká",		"Azul",		2014,	8.00,		0,		0,		"Pendente / conta") , 
+("2021-09-15",	"08:23",	"2021-09-15",	"09:00",	"GAF-1001",	"SP",	"Hiunday",	"I30",		"Prata",	2011,	28.00,		1,		1,		"Lavagem simples") ,
+("2021-09-15",	"08:40",	NULL,			"",			"FAL-9803",	"SP",	"GM",		"Tracker",	"Verde",	2020,	0,			1,		0,		"") ,
+("2021-09-15",	"08:55",	NULL,			"",			"ESC-1055",	"SP",	"Peugeot",	"206",		"Branca",	2015,	0,			0,		0,		"") ,
+("2021-09-15",	"09:01",	NULL,			"",			"BLW-1500",	"SP",	"VW",		"Fusca",	"Verde",	1970,	0,			0,		0,		"") ;
+
+/* Este comando insere 1 registro: */
+INSERT INTO nomeDaTabela (Lista de Campos) VALUES (Lista de Valores);
+
+/* Este comando insere vários registros: */
+INSERT INTO nomeDaTabela (Lista de Campos) VALUES 
+(Lista de Valores),
+(Lista de Valores),
+(Lista de Valores),
+(Lista de Valores),
+(Lista de Valores);
+
+
+/* Comandos de seleção de dados */
+SELECT placa FROM locacoes;
++----------+
+| placa    |
++----------+
+| ABC-1234 |
+| XYZ-0000 |
+| NBC-0101 |
+| GXS-0009 |
+| GAF-1001 |
+| FAL-9803 |
+| ESC-1055 |
+| BLW-1500 |
++----------+
+
+SELECT fabricante FROM locacoes;
++------------+
+| fabricante |
++------------+
+| VW         |
+| Fiat       |
+| Honda      |
+| Ford       |
+| Hiunday    |
+| GM         |
+| Peugeot    |
+| VW         |
++------------+
+
+SELECT fabricante, modelo, cor, ano FROM locacoes;
++------------+---------+--------+------+
+| fabricante | modelo  | cor    | ano  |
++------------+---------+--------+------+
+| VW         | Gol GTI | Prata  | 1999 |
+| Fiat       | Strada  | Preta  | 1985 |
+| Honda      | HRV     | Branca | 2019 |
+| Ford       | Ká      | Azul   | 2014 |
+| Hiunday    | I30     | Prata  | 2011 |
+| GM         | Tracker | Verde  | 2020 |
+| Peugeot    | 206     | Branca | 2015 |
+| VW         | Fusca   | Verde  | 1970 |
++------------+---------+--------+------+
+
+SELECT modelo, cor, ano, fabricante FROM locacoes;
++---------+--------+------+------------+
+| modelo  | cor    | ano  | fabricante |
++---------+--------+------+------------+
+| Gol GTI | Prata  | 1999 | VW         |
+| Strada  | Preta  | 1985 | Fiat       |
+| HRV     | Branca | 2019 | Honda      |
+| Ká      | Azul   | 2014 | Ford       |
+| I30     | Prata  | 2011 | Hiunday    |
+| Tracker | Verde  | 2020 | GM         |
+| 206     | Branca | 2015 | Peugeot    |
+| Fusca   | Verde  | 1970 | VW         |
++---------+--------+------+------------+
+
+SELECT placa FROM locacoes ORDER BY placa;
++----------+
+| placa    |
++----------+
+| ABC-1234 |
+| BLW-1500 |
+| ESC-1055 |
+| FAL-9803 |
+| GAF-1001 |
+| GXS-0009 |
+| NBC-0101 |
+| XYZ-0000 |
++----------+
+
+SELECT placa FROM locacoes ORDER BY placa DESC;
++----------+
+| placa    |
++----------+
+| XYZ-0000 |
+| NBC-0101 |
+| GXS-0009 |
+| GAF-1001 |
+| FAL-9803 |
+| ESC-1055 |
+| BLW-1500 |
+| ABC-1234 |
++----------+
+
+SELECT * FROM locacoes ORDER BY ano;
+SELECT * FROM locacoes ORDER BY ano DESC;
+
+SELECT uf, cor FROM locacoes;
+
++------+--------+
+| uf   | cor    |
++------+--------+
+| RS   | Prata  |
+| SP   | Preta  |
+| RJ   | Branca |
+| SC   | Azul   |
+| SP   | Prata  |
+| SP   | Verde  |
+| SP   | Branca |
+| SP   | Verde  |
++------+--------+
+
+SELECT uf, cor FROM locacoes ORDER BY uf,cor;
++------+--------+
+| RJ   | Branca |
+| RS   | Prata  |
+| SC   | Azul   |
+| SP   | Branca |
+| SP   | Prata  |
+| SP   | Preta  |
+| SP   | Verde  |
+| SP   | Verde  |
++------+--------+
+
+SELECT uf, cor FROM locacoes ORDER BY uf DESC,cor;
++------+--------+
+| uf   | cor    |
++------+--------+
+| SP   | Branca |
+| SP   | Prata  |
+| SP   | Preta  |
+| SP   | Verde  |
+| SP   | Verde  |
+| SC   | Azul   |
+| RS   | Prata  |
+| RJ   | Branca |
++------+--------+
+
+SELECT * FROM locacoes WHERE cor="Verde";
+
++----+------------+----------+---------+--------+----------+------+------------+---------+-------+------+-------+----------+------+------+
+| id | dtEntrada  | hEntrada | dtSaida | hSaida | placa    | uf   | fabricante | modelo  | cor   | ano  | valor | convenio | pago | obs  |
++----+------------+----------+---------+--------+----------+------+------------+---------+-------+------+-------+----------+------+------+
+|  6 | 2021-09-15 | 08:40    | NULL    |        | FAL-9803 | SP   | GM         | Tracker | Verde | 2020 |  0.00 |        1 |    0 |      |
+|  8 | 2021-09-15 | 09:01    | NULL    |        | BLW-1500 | SP   | VW         | Fusca   | Verde | 1970 |  0.00 |        0 |    0 |      |
++----+------------+----------+---------+--------+----------+------+------------+---------+-------+------+-------+----------+------+------+
+
+SELECT modelo,cor, ano FROM locacoes WHERE fabricante="VW";
++---------+-------+------+
+| modelo  | cor   | ano  |
++---------+-------+------+
+| Gol GTI | Prata | 1999 |
+| Fusca   | Verde | 1970 |
++---------+-------+------+
+
+SELECT dtEntrada, hEntrada, dtSaida, hSaida, placa FROM locacoes WHERE uf="SP";
++------------+----------+------------+--------+----------+
+| dtEntrada  | hEntrada | dtSaida    | hSaida | placa    |
++------------+----------+------------+--------+----------+
+| 2021-09-14 | 23:00    | 2021-09-15 | 08:00  | XYZ-0000 |
+| 2021-09-15 | 08:23    | 2021-09-15 | 09:00  | GAF-1001 |
+| 2021-09-15 | 08:40    | NULL       |        | FAL-9803 |
+| 2021-09-15 | 08:55    | NULL       |        | ESC-1055 |
+| 2021-09-15 | 09:01    | NULL       |        | BLW-1500 |
++------------+----------+------------+--------+----------+
+
+/* Selecionando registros específicos 
+	1. Listar as locacoes ainda não pagas.
+*/
+SELECT * FROM locacoes WHERE pago=0;
+
+/* 2. Listar as locações que ficaram pendentes de pagamento (apenas cujos carros já foram retirados do estacionamento). */
+SELECT * FROM locacoes WHERE pago=0 AND dtSaida IS NOT NULL; 
+
+SELECT * FROM locacoes WHERE pago=0 AND hSaida<>"";
+
++----+------------+----------+------------+--------+----------+------+------------+--------+------+------+-------+----------+------+------------------+
+| id | dtEntrada  | hEntrada | dtSaida    | hSaida | placa    | uf   | fabricante | modelo | cor  | ano  | valor | convenio | pago | obs              |
++----+------------+----------+------------+--------+----------+------+------------+--------+------+------+-------+----------+------+------------------+
+|  4 | 2021-09-15 | 08:20    | 2021-09-15 | 08:45  | GXS-0009 | SC   | Ford       | Ká     | Azul | 2014 |  8.00 |        0 |    0 | Pendente / conta |
++----+------------+----------+------------+--------+----------+------+------------+--------+------+------+-------+----------+------+------------------+
+
+
+/* Traz todos os registros onde a data de saída é nula (não tem valor)*/
+SELECT * FROM locacoes WHERE dtsaida IS NULL;
+
+/* Traz todos os registros onde a data de saída não é nula (tem valor)*/
+SELECT * FROM locacoes WHERE dtsaida IS NOT NULL;
+
+/*3. Listar as locações de carros apenas de São Paulo.*/
+SELECT * FROM locacoes WHERE uf="SP";
+
+/* Exibe todos os valores pagos */
+SELECT valor FROM locacoes WHERE pago=1;
+
+/*11. Somar todos os valores pagos */
+SELECT SUM(valor) AS valoresPagos FROM locacoes WHERE pago=1;
+
+/* Somar todos os valores pendents*/
+SELECT SUM(valor) AS valoresPendentes FROM locacoes WHERE pago=0;
+
+/*12. Somar todos os valores pagos dos veículos de origem de SP*/
+
+SELECT SUM(valor) AS valoresPagos FROM locacoes WHERE uf="SP";
+

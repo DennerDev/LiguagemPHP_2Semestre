@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-br"> <!-- salvar como novoPet.html -->
+	<head>
+		<meta charset="UTF-8">
+		<title>SGP - Inclusão de Pet</title>
+	</head>
+	
+	<body>
+		<h1>SGP - Sistema Gerencial de Pets</h1>
+		<hr>
+		<h3>Cadastro de Pet</h3>
+		
+		<form 	action="incluirPet.php" 
+				method="post"
+				enctype="multipart/form-data">
+				
+			Nome:
+			<input 	type="text"
+					name="nome"
+					maxlength="30"
+					required
+					size="30"
+					placeholder="Informe o nome de seu Pet">
+			<br>
+			Sexo:
+			<input type="radio" name="sexo" value="M"> Masculino
+			<input type="radio" name="sexo" value="F" checked> Feminino
+			<br>
+			
+			Tipo:
+			<select name="tipo">
+				<option value="">Escolha</option>
+				<option value="C">Cachorro</option>
+				<option value="G">Gato</option>
+				<option value="P">Pássaro</option>
+				<option value="R">Réptil</option>
+				<option value="O">Outros</option>
+			</select>
+			<br>
+			
+			Dono:
+			<input 	type="text"
+					name="nomeDono"
+					placeholder="Informe o nome do dono"
+					maxlength="50"
+					size="50">
+			<br>
+			<fieldset>
+				<legend>Dados Médicos</legend>
+				Idade:
+				<input 	type="number"
+						name="idade"
+						min="0"
+						max="120"
+						value="0">
+			</fieldset>
+			<br>
+			Observações:<br>
+			<textarea name="obs" rows="5" cols="80"></textarea>
+			<br>
+			Foto:
+			<input type="file" name="foto">
+			<br>
+			<hr>
+			<input type="submit" value="Cadastrar">
+		</form>
+		<hr>
+		Clique <a href="listagem.php">aqui</a> para a <b>Listagem de Pets</b>
+	</body>
+
+</html>

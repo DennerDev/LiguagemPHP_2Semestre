@@ -1,0 +1,79 @@
+Executar o Wamp Server
+Abrir o console do MYSQL
+
+/* 1. Criar o banco de dados da aula de hoje */
+CREATE DATABASE Set2021;
+
+/* 2. Visualizando o banco de dados criado */
+SHOW DATABASES;
+
+/* 3. Abrir o banco de dados para uso */
+USE Set2021;
+
+/* 4. Criar a tabela de clientes */
+CREATE TABLE clientes (
+	id  	    INT   AUTO_INCREMENT   PRIMARY   KEY 	,
+	nome 	    VARCHAR (80) 		    				,
+	ddd  	    VARCHAR (2) 		    				,
+	telefone  	VARCHAR (11) 							, 
+	endereco  	TEXT 									,
+	email  	    VARCHAR (100) 		    				,
+	conveniado  BOOLEAN			    					,
+	tipo	    CHAR (1)
+);
+
+SHOW TABLES;
+DESCRIBE clientes;
+
+/* 5. Criar a tabela de carros */
+CREATE TABLE carros (
+	id  		INT AUTO_INCREMENT PRIMARY KEY  ,
+	idCliente 	INT				  				,
+	placa 		VARCHAR(8)						,
+	tipo 		VARCHAR(10)					  	,
+	fabricante 	VARCHAR(25) 			  		,
+ 	modelo 		VARCHAR(25) 			  		,
+	ano  		INT(4)				  			,
+	cor  		VARCHAR(15)
+);
+
+SHOW TABLES;
+DESCRIBE carros;
+
+
+
+/* 6. Criar tabela de mensalidades */
+CREATE TABLE mensalidades (
+	id  	 	INT AUTO_INCREMENT PRIMARY KEY  ,
+	idCarro	 	INT								,
+	vencimento 	DATE							,
+	valor 	 	FLOAT(7,2)						,
+	situacao  	BOOLEAN							, 
+	ativa 	 	BOOLEAN							,
+	obs 	 	TEXT
+);
+
+SHOW TABLES;
+DESCRIBE mensalidades;
+
+/* 7. Criar tabela de LOCAÃ‡Ã•ES  */
+CREATE TABLE locacoes (
+    id   		INT AUTO_INCREMENT PRIMARY KEY 	,
+	dtEntrada  	DATE							,
+	hEntrada  	CHAR (5)			 			,
+	dtSaida  	DATE							,
+	hSaida  	CHAR (5)			 			,
+	placa  		VARCHAR (8)						,
+	uf     		CHAR (2)			 			,
+	fabricante  VARCHAR (20)					,
+	modelo  	VARCHAR (20)					,
+	cor  		VARCHAR (20)					,
+	ano	 		INT (4)							,
+	valor   	FLOAT (6,2)						,
+	convenio 	TINYINT (1)						,
+  	pago  		BOOLEAN			 				,
+ 	obs 	 	TEXT
+);
+
+SHOW TABLES;
+DESCRIBE locacoes;

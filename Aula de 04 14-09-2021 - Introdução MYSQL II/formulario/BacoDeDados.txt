@@ -1,0 +1,36 @@
+CREATE DATABASE rh;
+USE rh;
+
+CREATE TABLE candidatos(
+	id 	   	 	INT AUTO_INCREMENT PRIMARY KEY,
+	nome 	 	VARCHAR(50),
+	email 	 	VARCHAR(50),
+	senha 	 	VARCHAR(15),
+	HTML 		BOOLEAN,
+	CSS 		BOOLEAN,
+	PHP 	 	BOOLEAN,
+	MYSQL 	 	BOOLEAN,
+	JAVASCRIPT 	BOOLEAN,
+	JAVA	 	BOOLEAN,
+	C	 		BOOLEAN,
+	vaga 		CHAR(1)
+);
+
+///////////////////////////////////////
+
+CREATE TABLE candidatos(
+	id 	   	 	INT AUTO_INCREMENT PRIMARY KEY,
+	nome 	 	VARCHAR(50),
+	email 	 	VARCHAR(50),
+	senha 	 	VARCHAR(15),
+	HTML 		BOOLEAN,
+	CSS 		BOOLEAN,
+	PHP 	 	BOOLEAN,
+	MYSQL 	 	BOOLEAN,
+	JAVASCRIPT 	BOOLEAN,
+	JAVA	 	BOOLEAN,
+	C	 		BOOLEAN,
+	vaga 		CHAR(1),
+	experiencia TEXT,
+	curriculo   VARCHAR(50)
+);
